@@ -1,6 +1,6 @@
 const GHPATH = '';
 const APP_PREFIX = 'gppwa_';
-const VERSION = 'version_003'; // Increment the version to trigger an update
+const VERSION = 'version_004'; // Increment the version to trigger an update
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 // The list of URLs for the "app shell" that will be cached on install.
@@ -30,6 +30,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
+  // For all other requests, use a cache-first strategy.
   e.respondWith(
     caches.match(e.request).then((response) => {
       return response || fetch(e.request).then((response) => {
@@ -41,38 +42,16 @@ self.addEventListener('fetch', (e) => {
   );
 });
 
-// Cache the app shell on install, logging errors without failing
+// Cache the app shell on install
 self.addEventListener('install', (e) => {
-  self.skipWaiting(); 
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('Installing cache : ' + CACHE_NAME);
+  self.skipWaiting(); // Force the waiting service worker to become the active service worker.
+  e.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('Installing cache : ' + CACHE_NAME);
+      return cache.addAll(APP_SHELL_URLS);
+    })
+  );
 
-      // Create an array of promises
-      const promises = APP_SHELL_URLS.map((url) => {
-        // Create a new Request object
-        const request = new Request(url);
-
-        return fetch(request)
-          .then((response) => {
-            // If the response is not ok (e.g., 404)
-            if (!response.ok) {
-              console.error(`Failed to fetch ${url} for cache: ${response.status}`);
-              return; // Don't cache it, but don't fail the install
-            }
-            // If successful, put it in the cache
-            return cache.put(request, response);
-          })
-          .catch((err) => {
-            // Handle network errors (e.g., offline)
-            console.error(`Network error fetching ${url}: ${err.message}`);
-          });
-      });
-
-      // Wait for all individual fetch/cache operations to finish
-      return Promise.all(promises);
-    })
-  );
 });
 
 // Delete old caches on activate
