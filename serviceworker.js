@@ -10,8 +10,8 @@ const APP_SHELL_URLS = [
   `${GHPATH}/index.js`,
   `${GHPATH}/manifest.webmanifest`,
   `${GHPATH}/icons/favicon.ico`,
-  `${GHPATH}/icons/icon192x192.png`,
-  `${GHPATH}/icons/icon512x512.png`,
+  `${GHPATH}/icons/icon-192x192.png`,
+  `${GHPATH}/icons/icon-512x512.png`,
 ];
 
 // Respond with cached resources, falling back to the network.
