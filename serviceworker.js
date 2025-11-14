@@ -5,7 +5,6 @@ const CACHE_NAME = APP_PREFIX + VERSION;
 
 // The list of URLs for the "app shell" that will be cached on install.
 const APP_SHELL_URLS = [
-  `${GHPATH}/`,
   `${GHPATH}/index.html`,
   `${GHPATH}/index.css`,
   `${GHPATH}/index.js`,
@@ -30,15 +29,11 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // For all other requests, use a cache-first strategy.
   e.respondWith(
     caches.match(e.request).then((response) => {
       return response || fetch(e.request).then((response) => {
-        // We only cache requests to our own origin to avoid caching third-party assets.
-        if (response && response.status === 200 && new URL(e.request.url).origin === self.location.origin) {
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, responseToCache));
-        }
+        const responseToCache = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(e.request, responseToCache));
         return response;
       });
     })
