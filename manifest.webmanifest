@@ -1,0 +1,33 @@
+{
+  "name": "Ibertrans",
+  "short_name": "Ibertrans",
+  "description": "Applicación que hace fácil el transporte",
+  "scope": "/",
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone", 
+  "icons": [
+      {
+          "src": "/icons/icon.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any maskable"
+      },
+      {
+          "src": "/icons/icon.png",
+          "sizes": "384x384",
+          "type": "image/png"
+      },
+      {
+          "src": "/icons/icon.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      },
+      {
+          "src": "/icons/icon.png",
+          "sizes": "700x700",
+          "type": "image/png"
+      }
+  ]
+}

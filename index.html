@@ -1,0 +1,26 @@
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        const serviceWorkerPath = 'serviceworker.js';
+        navigator.serviceWorker.register(serviceWorkerPath)
+          .then((registration) => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch((error) => {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+      });
+    }
+</script>
+</head>
+<body>
+    <h1>Ibertrans</h1>
+    <footer>
+        <p style="margin: 0;">Footer</p>
+    </footer>
+</body>

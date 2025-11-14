@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+footer{
+
+    border-top: 1px solid black;
+    position: fixed;
+    font-size: large;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+
+}
