@@ -121,7 +121,50 @@ function update(){
 
             outArr.push(mapout);
         }
-        updateOutput(outArr);
+    });
+
+    sortTrains(outArr);
+    
+    updateOutput(outArr.slice(0, 10));
+}
+
+function sortTrains(trains) {
+    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const now = new Date();
+    // getDay() is 0 for Sunday, we want 0 for Monday.
+    const currentDayIndex = (now.getDay() + 6) % 7; 
+    const currentDayName = weekdays[currentDayIndex];
+    const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+    // Create a sorting order for days starting from the current day
+    const dayOrder = [...weekdays.slice(currentDayIndex), ...weekdays.slice(0, currentDayIndex)];
+
+    trains.sort((a, b) => {
+        const timeA = a["Departure time"] || a["Start Time"];
+        const timeB = b["Departure time"] || b["Start Time"];
+
+        const isAToday = a.Date === currentDayName;
+        const isBToday = b.Date === currentDayName;
+
+        const aHasDeparted = isAToday && timeA < currentTime;
+        const bHasDeparted = isBToday && timeB < currentTime;
+
+        // A has departed today, B has not. B comes first.
+        if (aHasDeparted && !bHasDeparted) return 1;
+        // B has departed today, A has not. A comes first.
+        if (!aHasDeparted && bHasDeparted) return -1;
+
+        // Get index of the day in our custom-ordered week
+        const dayIndexA = dayOrder.indexOf(a.Date);
+        const dayIndexB = dayOrder.indexOf(b.Date);
+
+        // Sort by day of the week
+        if (dayIndexA !== dayIndexB) {
+            return dayIndexA - dayIndexB;
+        }
+
+        // If days are the same, sort by time
+        return timeA.localeCompare(timeB);
     });
 }
 
@@ -148,7 +191,7 @@ function updateOutput(inArr){
                 return indexA - indexB;
             });
 
-            strOut += "<p>";
+            strOut += '<p class="train-display">';
             sortedKeys.forEach(key =>{
 
                 strOut += `${key}: ${map[key]}<br>`;

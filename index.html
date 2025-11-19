@@ -20,26 +20,32 @@
 </head>
 <body>
     <h1>Ibertrans</h1>
-    <button id="update-button">Update</button>
-    <select name="day-selector" id="day-selector">
-      <option value="">All</option>
-      <option value="Monday">Monday</option>
-      <option value="Tuesday">Tuesday</option>
-      <option value="Wednesday">Wednesday</option>
-      <option value="Thursday">Thursday</option>
-      <option value="Friday">Friday</option>
-      <option value="Saturday">Saturday</option>
-      <option value="Sunday">Sunday</option>
-    </select>
-    From:
-    <select name="station-from-selector" id="station-from-selector">
-      <option value="">All</option>
-    </select>
-    To:
-    <select name="station-to-selector" id="station-to-selector">
-      <option value="">All</option>
-    </select>
+
+    <div id="search-container">
+      <select name="day-selector" id="day-selector">
+        <option value="">All</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+      From:
+      <select name="station-from-selector" id="station-from-selector">
+        <option value="">All</option>
+      </select>
+      To:
+      <select name="station-to-selector" id="station-to-selector">
+        <option value="">All</option>
+      </select>
+      <button id="update-button">Search</button>
+    </div>
+
     <div id="test-div"></div>
+
+
     <footer>
         <p style="margin: 0;background-color: white;">Footer</p>
     </footer>
