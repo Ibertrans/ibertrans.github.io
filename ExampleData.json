@@ -1,0 +1,91 @@
+{
+    "trainData":
+    [
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"06:30","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"07:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"07:30","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Monday","Time":"08:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"08:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"09:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"09:30","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Monday","Time":"10:00","Route":"ParcBit -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"17:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Monday","Time":"17:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"06:30","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"07:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"07:30","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Tuesday","Time":"08:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"08:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"09:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"09:30","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Tuesday","Time":"10:00","Route":"ParcBit -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"17:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Tuesday","Time":"17:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"06:30","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"07:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"07:30","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Wednesday","Time":"08:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"08:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"09:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"09:30","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Wednesday","Time":"10:00","Route":"ParcBit -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"17:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Wednesday","Time":"17:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"06:30","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"07:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"07:30","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Thursday","Time":"08:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"08:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"09:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"09:30","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Thursday","Time":"10:00","Route":"ParcBit -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"17:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Thursday","Time":"17:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"06:30","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"07:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"07:30","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Friday","Time":"08:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"08:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"09:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"09:30","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Friday","Time":"10:00","Route":"ParcBit -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"18:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Friday","Time":"18:30","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Saturday","Time":"08:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Saturday","Time":"09:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Saturday","Time":"10:00","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Saturday","Time":"11:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Saturday","Time":"12:00","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Saturday","Time":"13:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Saturday","Time":"14:00","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Saturday","Time":"15:00","Route":"ParcBit -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Sunday","Time":"09:00","Route":"Palma -> Inca"},
+        {"Company":"TIB","Type":"Train","Date":"Sunday","Time":"10:00","Route":"Palma -> Sa Pobla"},
+        {"Company":"TIB","Type":"Train","Date":"Sunday","Time":"11:00","Route":"Palma -> Manacor"},
+        {"Company":"TIB","Type":"Metro","Date":"Sunday","Time":"12:00","Route":"Palma -> ParcBit"},
+        {"Company":"TIB","Type":"Train","Date":"Sunday","Time":"16:00","Route":"Inca -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Sunday","Time":"17:00","Route":"Sa Pobla -> Palma"},
+        {"Company":"TIB","Type":"Train","Date":"Sunday","Time":"18:00","Route":"Manacor -> Palma"},
+        {"Company":"TIB","Type":"Metro","Date":"Sunday","Time":"19:00","Route":"ParcBit -> Palma"}
+    ],
+    "trainRoutes":{
+        "TIB":{
+            "Palma -> Inca":{
+                "Stops":["Palma", "Jacint Verdaguer", "Son Costa - Son Fortesa", "Son Fuster", "Son Cladera - es Vivero", "Verge de Lluc", "Pont d'Inca", "Pont d'Inca Nou", "Poligon de Marratxi", "Marratxi", "Es Caulls", "Santa Maria", "Consell", "Binissalem", "Lloseta", "Inca"],
+                "Times":[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 31, 34]
+            },
+            "Palma -> Sa Pobla":{
+                "Stops":["Palma", "Jacint Verdaguer", "Son Costa - Son Fortesa", "Son Fuster", "Son Cladera - es Vivero", "Verge de Lluc", "Pont d'Inca", "Pont d'Inca Nou", "Poligon de Marratxi", "Marratxi", "Es Caulls", "Santa Maria", "Consell", "Binissalem", "Lloseta", "Inca", "Constancia", "Enllac", "Llubi", "Muro", "Sa Pobla"],
+                "Times":[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 31, 34, 36, 38, 42, 45, 49]
+            },
+            "Palma -> Manacor":{
+                "Stops":["Palma", "Jacint Verdaguer", "Son Costa - Son Fortesa", "Son Fuster", "Son Cladera - es Vivero", "Verge de Lluc", "Pont d'Inca", "Pont d'Inca Nou", "Poligon de Marratxi", "Marratxi", "Es Caulls", "Santa Maria", "Consell", "Binissalem", "Lloseta", "Inca", "Constancia", "Sineu", "Petra", "Manacor"],
+                "Times":[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 31, 34, 36, 45, 52, 61]
+            },
+            "Palma -> ParcBit":{
+                "Stops":["Palma", "Jacint Verdaguer", "Son Costa - Son Fortesa", "Son Fuster Vell", "Son Castello", "Gran Via Asima", "Cami dels Reis", "Son Sardina", "UIB", "ParcBit"],
+                "Times":[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+            }
+        }
+    }
+}
