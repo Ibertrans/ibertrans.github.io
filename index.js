@@ -1,7 +1,14 @@
 import exampleData from "./ExampleData.json" with { type: 'json' };
 const data = exampleData["trainData"];
-var routes = exampleData["trainRoutes"];
-routes = addReverseRoutes(routes);
+var routes = addReverseRoutes(exampleData["trainRoutes"]);
+const testDiv = document.getElementById("test-div");
+const updateButton = document.getElementById("update-button")
+updateButton.onclick = update;
+const stationFromSelector = document.getElementById("station-from-selector");
+const stationToSelector = document.getElementById("station-to-selector");
+
+updateStationSelectors(routes);
+update();
 
 function addReverseRoutes(routesToReverse){
     const routeReverseRegex = /^(.*?)\s*->\s*(.*)$/;
@@ -18,14 +25,6 @@ function addReverseRoutes(routesToReverse){
     }
     return routesToReverse;
 }
-console.log({"trainData" : data, "trainRoutes" : routes});
-
-const testDiv = document.getElementById("test-div");
-const updateButton = document.getElementById("update-button")
-updateButton.onclick = update;
-const stationFromSelector = document.getElementById("station-from-selector");
-const stationToSelector = document.getElementById("station-to-selector");
-updateStationSelectors(routes);
 
 function updateStationSelectors(inputRoutes){
     var out = [];
@@ -48,10 +47,18 @@ function updateStationSelectors(inputRoutes){
     })
 }
 
+function addMinutes(timeStr, minutes) {
+    const [hours, mins] = timeStr.split(':').map(Number);
+    const date = new Date();
+    date.setHours(hours, mins, 0, 0);
+    date.setMinutes(date.getMinutes() + minutes);
+    const newHours = String(date.getHours()).padStart(2, '0');
+    const newMins = String(date.getMinutes()).padStart(2, '0');
+    return `${newHours}:${newMins}`;
+}
+
 function update(){
     console.log("update")
-    testDiv.innerHTML = "Loading...";
-    var strOut = "";
     const selectedDay = document.getElementById("day-selector").value;
     
     let dataToDisplay = data;
@@ -80,10 +87,77 @@ function update(){
         )
     }
 
+    const fromStation = stationFromSelector.value;
+    const toStation = stationToSelector.value;
+
+    var outArr = [];
+
     dataToDisplay.forEach(element => {
         if (element) {
-            strOut += `<p>Company:${element["Company"]}<br>Type:${element["Type"]}<br>Time:${element["Time"]}<br>Route:${element["Route"]}</p>`;
+            let mapout = {};
+
+            const routeInfo = routes[element["Company"]][element["Route"]];
+            const routeStops = routeInfo["Stops"];
+            const routeTimes = routeInfo["Times"];
+            const trainStartTime = element["Time"];
+
+            if (fromStation) {
+                const fromIndex = routeStops.indexOf(fromStation);
+                const departureTime = addMinutes(trainStartTime, routeTimes[fromIndex]);
+                mapout["Departure time"] = departureTime;
+            }
+
+            if (toStation) {
+                const toIndex = routeStops.indexOf(toStation);
+                const arrivalTime = addMinutes(trainStartTime, routeTimes[toIndex]);
+                mapout["Arrival time"] = arrivalTime;
+            }
+
+            mapout["Company"] = element["Company"];
+            mapout["Type"] = element["Type"];
+            mapout["Route"] = element["Route"];
+            mapout["Date"] = element["Date"];
+            mapout["Start Time"] = element["Time"];
+
+            outArr.push(mapout);
+        }
+        updateOutput(outArr);
+    });
+}
+
+function updateOutput(inArr){
+    const customOrder = [
+        "Company",
+        "Type",
+        "Route",
+        "Date",
+        "Departure time",
+        "Arrival time",
+        "Start Time"
+    ];
+
+    var strOut = "";
+
+    inArr.forEach(map => {
+        if (map) {
+            const sortedKeys = Object.keys(map).sort((a, b) => {
+                const indexA = customOrder.indexOf(a);
+                const indexB = customOrder.indexOf(b);
+                if (indexA === -1) return 1;
+                if (indexB === -1) return -1;
+                return indexA - indexB;
+            });
+
+            strOut += "<p>";
+            sortedKeys.forEach(key =>{
+
+                strOut += `${key}: ${map[key]}<br>`;
+
+            })
+            strOut += "</p>";
         }
     });
+
     testDiv.innerHTML = strOut;
+    
 }
