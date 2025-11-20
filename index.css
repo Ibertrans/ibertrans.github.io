@@ -18,10 +18,12 @@ body{
     padding: 25px;
     border-radius: 15px;
 }
-#test-div{
+#output-div{
+    position: relative;
     text-align: left;
     background-color: lightcoral;
     padding: 25px;
+    padding-top: 45px;
     border-radius: 15px;
     margin: 25px;
 }
@@ -29,4 +31,45 @@ body{
     background-color: white;
     border-radius: 15px;
     padding: 20px;
+    margin:0;
+}
+#test-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+@media screen and (max-width: 700px){
+    #test-div{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .train-display{
+        font-size: 0.5em;
+    }
+}
+.page-button{
+    position: absolute;
+    background-color: lightcoral;
+    color: white;
+    border: 2px outset white;
+}
+.page-button.top{
+    top:19px;
+}
+.page-button.bottom{
+    bottom:19px;
+}
+.page-button.left{
+    left:25px;
+}
+.page-button.right{
+    right:25px;
+}
+.page-button:hover{
+    background-color: hsl(0, 79%, 65%);
+}
+.page-button:focus{
+    background-color: hsl(0, 79%, 60%);
+}
+.page-button:disabled{
+    background-color: hsl(0, 30%, 50%);;
 }
