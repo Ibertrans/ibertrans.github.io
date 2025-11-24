@@ -1,3 +1,9 @@
+:root {
+  --primary-color: navy; /* global scope */
+  --primary-color-hover: rgb(0, 0, 185);
+  --primary-color-disabled: rgb(113, 113, 143);
+  --text-alt: white;
+}
 footer{
 
     border-top: 1px solid black;
@@ -13,15 +19,16 @@ body{
     text-align: center;
 }
 #search-container{
-    background-color: lightcoral;
-    display:inline;
+    background-color: var(--primary-color);
+    display:inline-block;
     padding: 25px;
     border-radius: 15px;
+    color: var(--text-alt);
 }
 #output-div{
     position: relative;
     text-align: left;
-    background-color: lightcoral;
+    background-color: var(--primary-color);
     padding: 25px;
     padding-top: 45px;
     border-radius: 15px;
@@ -35,20 +42,41 @@ body{
 }
 #test-div{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
 }
-@media screen and (min-width: 700px){
+@media screen and (max-width: 1000px){
     #test-div{
         grid-template-columns: repeat(3, 1fr);
     }
     .train-display{
+        font-size: 0.75em;
+    }
+    #search-container{
+        padding: 20px;
+    }
+    #search-container *{
+        font-size: 0.75em;
+    }
+}
+@media screen and (max-width: 700px){
+    #test-div{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .train-display{
+        font-size: 0.5em;
+    }
+    #search-container{
+        padding: 15px;
+    }
+    #search-container *{
         font-size: 0.5em;
     }
 }
+
 .page-button{
     position: absolute;
-    background-color: lightcoral;
+    background-color: var(--primary-color);
     color: white;
     border: 2px outset white;
 }
@@ -64,12 +92,12 @@ body{
 .page-button.right{
     right:25px;
 }
-.page-button:hover{
-    background-color: hsl(0, 79%, 65%);
+.page-button:hover, .page-button:focus:hover {
+    background-color: var(--primary-color-hover);
 }
 .page-button:focus{
-    background-color: hsl(0, 79%, 60%);
+    background-color: var(--primary-color);
 }
 .page-button:disabled{
-    background-color: hsl(0, 30%, 50%);;
+    background-color: var(--primary-color-disabled);
 }
