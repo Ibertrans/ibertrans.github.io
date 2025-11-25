@@ -59,8 +59,11 @@ body{
         grid-template-columns: repeat(2, 1fr);
     }
     .train-display{
-        font-size: 1.5vw;
+        font-size: 1.75vw;
     }
+    #search-container, #search-container *{
+    font-size: 1.5vw;
+}
 }
 
 .page-button{
