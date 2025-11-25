@@ -47,7 +47,7 @@ body{
     gap: 5px;
 }
 #search-container, #search-container *{
-    font-size: 1.5vw;
+    font-size: 1.25vw;
 }
 @media screen and (max-width: 1000px){
     #test-div{
@@ -57,6 +57,9 @@ body{
 @media screen and (max-width: 700px){
     #test-div{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .train-display{
+        font-size: 1.5vw;
     }
 }
 
