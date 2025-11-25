@@ -1,6 +1,4 @@
-//import exampleData from "./ExampleData.json" with { type: 'json' };
-
-const getData = async (str) => { // Renamed for clarity
+const getData = async (str) => {
     try {
         const response = await fetch(str);
         const jsonData = await response.json();
