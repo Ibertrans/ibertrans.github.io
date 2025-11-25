@@ -21,8 +21,8 @@ body{
 #search-container{
     background-color: var(--primary-color);
     display:inline-block;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 1.75vw;
+    border-radius: 1.75vw;
     color: var(--text-alt);
 }
 #output-div{
@@ -36,41 +36,27 @@ body{
 }
 .train-display{
     background-color: white;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 1.5vw;
+    padding: 2vw;
     margin:0;
+    font-size: 1vw;
 }
 #test-div{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
 }
+#search-container, #search-container *{
+    font-size: 1.5vw;
+}
 @media screen and (max-width: 1000px){
     #test-div{
         grid-template-columns: repeat(3, 1fr);
-    }
-    .train-display{
-        font-size: 0.75em;
-    }
-    #search-container{
-        padding: 20px;
-    }
-    #search-container *{
-        font-size: 0.75em;
     }
 }
 @media screen and (max-width: 700px){
     #test-div{
         grid-template-columns: repeat(2, 1fr);
-    }
-    .train-display{
-        font-size: 0.5em;
-    }
-    #search-container{
-        padding: 15px;
-    }
-    #search-container *{
-        font-size: 0.5em;
     }
 }
 
