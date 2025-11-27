@@ -13,6 +13,7 @@ const APP_SHELL_URLS = [
   `${GHPATH}/icons/icon-192x192.png`,
   `${GHPATH}/icons/icon-512x512.png`,
   `${GHPATH}/ExampleData.json`,
+  `${GHPATH}/APICaller.js`
 ];
 
 // Respond with cached resources, falling back to the network.
