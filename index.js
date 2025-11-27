@@ -127,6 +127,8 @@ async function trainManager(){
                     const fromIndex = routeStops.indexOf(fromStation);
                     const departureTime = addMinutes(trainStartTime, routeTimes[fromIndex]);
                     mapout["Departure time"] = departureTime;
+                }   else{
+                    mapout["Departure time"] = element["Time"];
                 }
 
                 if (toStation) {
@@ -139,7 +141,6 @@ async function trainManager(){
                 mapout["Type"] = element["Type"];
                 mapout["Route"] = element["Route"];
                 mapout["Date"] = element["Date"];
-                mapout["Start Time"] = element["Time"];
 
                 outArr.push(mapout);
             }
@@ -163,8 +164,8 @@ async function trainManager(){
         const dayOrder = [...weekdays.slice(currentDayIndex), ...weekdays.slice(0, currentDayIndex)];
 
         trains.sort((a, b) => {
-            const timeA = a["Departure time"] || a["Start Time"];
-            const timeB = b["Departure time"] || b["Start Time"];
+            const timeA = a["Departure time"];
+            const timeB = b["Departure time"];
 
             const isAToday = a.Date === currentDayName;
             const isBToday = b.Date === currentDayName;
@@ -198,8 +199,7 @@ async function trainManager(){
             "Route",
             "Date",
             "Departure time",
-            "Arrival time",
-            "Start Time"
+            "Arrival time"
         ];
 
         const maxLoaded = 12;
