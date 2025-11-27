@@ -1,7 +1,6 @@
 import {API} from "./APIs/APICaller.js";
 
 let dataIn = API.getData();
-console.log(dataIn)
 dataIn["trainRoutes"] = addReverseRoutes(dataIn["trainRoutes"]);
 const data = dataIn;
 const testDiv = document.getElementById("test-div");
@@ -139,7 +138,6 @@ function update(){
     });
 
     sortTrains(outArr);
-    console.log(outArr)
     savedArr = outArr;
     updateOutput();
 }
@@ -219,7 +217,6 @@ function updateOutput(){
     }
 
     var strOut = testDivContent;
-    console.log(savedArr);
     savedArr.slice(pageOffset*maxLoaded, (pageOffset + 1)*maxLoaded).forEach(map => {
         if (map) {
             const sortedKeys = Object.keys(map).sort((a, b) => {
