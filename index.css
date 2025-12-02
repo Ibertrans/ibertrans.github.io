@@ -3,6 +3,7 @@
   --primary-color-hover: rgb(0, 0, 185);
   --primary-color-disabled: rgb(113, 113, 143);
   --text-alt: white;
+  --button-filter: brightness(0) invert(13%) sepia(100%) saturate(4686%) hue-rotate(244deg) brightness(300%) contrast(141%);
 }
 html{
     height: 100vh;

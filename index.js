@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function switchPage(pageName) {
         if (!page.src.endsWith(`${pageName}.html`)) {
+            Array.from(footerButtons).forEach(button => {
+                if(button.classList[0] == pageName){
+                    button.getElementsByTagName('img')[0].style.filter = "none";
+                }
+                else{
+                    button.getElementsByTagName('img')[0].style.filter = "var(--button-filter)";
+                }
+            })
             page.src = `${pageName}.html`;
         }
     }
