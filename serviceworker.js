@@ -1,6 +1,6 @@
 const GHPATH = '';
 const APP_PREFIX = 'gppwa_';
-const VERSION = 'version_005'; // Increment the version to trigger an update
+const VERSION = 'version_006'; // Increment the version to trigger an update
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 // The list of URLs for the "app shell" that will be cached on install.
@@ -8,6 +8,9 @@ const APP_SHELL_URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.css`,
   `${GHPATH}/index.js`,
+  `${GHPATH}/search.js`,
+  `${GHPATH}/search.html`,
+  `${GHPATH}/card.html`,
   `${GHPATH}/APIs/APICaller.js`,
   `${GHPATH}/manifest.webmanifest`,
   `${GHPATH}/icons/favicon.ico`,
