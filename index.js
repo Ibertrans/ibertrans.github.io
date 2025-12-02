@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!page.src.endsWith(`${pageName}.html`)) {
             Array.from(footerButtons).forEach(button => {
                 if(button.classList[0] == pageName){
-                    button.getElementsByTagName('img')[0].style.filter = "none";
+                    button.getElementsByTagName('img')[0].style.filter = "var(--button-filter)";
                 }
                 else{
-                    button.getElementsByTagName('img')[0].style.filter = "var(--button-filter)";
+                    button.getElementsByTagName('img')[0].style.filter = "none";
                 }
             })
             page.src = `${pageName}.html`;
