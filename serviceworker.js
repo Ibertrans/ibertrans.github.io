@@ -8,6 +8,7 @@ const APP_SHELL_URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.css`,
   `${GHPATH}/index.js`,
+  `${GHPATH}/APIs/APICaller.js`,
   `${GHPATH}/manifest.webmanifest`,
   `${GHPATH}/icons/favicon.ico`,
   `${GHPATH}/icons/icon-192x192.png`,
