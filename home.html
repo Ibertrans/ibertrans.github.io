@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-image: url("images/home-background.webp");
+                background-size: 100vw;
+                background-position-y:top;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
     <body>
-        <h1>HOME!!!</h1>
+        <div id="title-background">
+            <h1 id="home-header">IBERTRANS</h1>
+        </div>
+        <div id="home-content" >
+            <h1 style="font-weight: 900; font-size: 3vw;">SERVICIOS QUE OFRECEMOS</h1>
+            <table width="80%" style="margin: 0px auto; border-spacing: 1vw; font-size: 2vw; color:var(--primary-color); font-weight: 900;">
+                <tr>
+                    <td width="33%">
+                        <img width="100%" src="images/servicios-terrestre.webp">
+                    </td>
+                    <td width="33%">
+                        <img width="100%" src="images/servicios-aereo.webp">
+                    </td>
+                    <td width="33%">
+                        <img width="100%" src="images/servicios-maritimo.webp">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Transporte Terrestre
+                    </td>
+                    <td>
+                        Transporte Aéreo
+                    </td>
+                    <td>
+                        Transporte Marítimo
+                    </td>
+                </tr>   
+            </table>
+            <table width="80%" style="margin: 0px auto; border-spacing: 1vw; font-size: 2vw; color:var(--primary-color); font-weight: 900;">
+                <tr>
+                    <td width="45%">
+                        <img width="100%" src="images/somos.webp">
+                    </td>
+                    <td width="55%" style="font-size: 0.8em; text-align: left;">
+                        <h2>¿Quiénes somos?</h2>
+                        <p>Ibertrans es una empresa líder en la gestión y venta de tickets para transporte en toda España. Nuestro equipo de profesionales e informáticos trabaja incansablemente dia por dia para brindar a tu mesa el mejor transporte que la tecnologia mas puntera puede ofrecer.</p>
+                    </td>
+                </tr>
+            </table>
+            <table width="80%" style="margin: 0px auto; border-spacing: 1vw; font-size: 2vw; color:var(--primary-color); font-weight: 900;">
+                <tr>
+                    <td width="55%" style="font-size: 0.8em; text-align: right;">
+                        <h2>¿Qué ofrecemos?</h2>
+                        <p>Nos especializamos en ofrecer soluciones rápidas, seguras y cómodas para la compra de billetes nacionales, conectando a nuestros clientes con las mejores opciones de viaje.</p>
+                    </td>
+                    <td width="45%">
+                        <img width="100%" src="images/ofrecemos.webp">
+                    </td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>

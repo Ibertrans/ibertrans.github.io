@@ -7,6 +7,9 @@
 html{
     height: 100vh;
 }
+*{
+    font-family: arial;
+}
 footer{
 
     display: flex;
@@ -138,4 +141,22 @@ footer>button{
 }
 img[src$=".svg"]{
     pointer-events:none;
+}
+#home-header{
+    font-family: Unbounded, Arial;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-decoration-thickness: 0.2EM;
+    font-size: 6vw;
+    margin-top: 0;
+    color: white;
+}
+#title-background{
+    background-color: transparent;
+    width: 100%;
+    height: 20vw;
+    padding-top: 5vw;
+}
+#home-content{
+    background-color: white;
 }
