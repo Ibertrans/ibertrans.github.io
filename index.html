@@ -1,5 +1,4 @@
 <head>
-    <script type="module" src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css"/>
     <link rel="manifest" href="manifest.webmanifest">
@@ -17,41 +16,20 @@
           });
       });
     }
-</script>
+    </script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <h1>Ibertrans</h1>
-
-    <div id="search-container">
-      <select name="day-selector" id="day-selector">
-        <option value="">All</option>
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-        <option value="Saturday">Saturday</option>
-        <option value="Sunday">Sunday</option>
-      </select>
-      From:
-      <select name="station-from-selector" id="station-from-selector">
-        <option value="">All</option>
-      </select>
-      To:
-      <select name="station-to-selector" id="station-to-selector">
-        <option value="">All</option>
-      </select>
-      <button id="update-button">Search</button>
-    </div>
-
-    <div id="output-div">
-      <button class="left top page-button">&lt;</button>
-      <button class="right top page-button">&gt;</button>
-      <div id="test-div"></div>
-    </div>
-
-
+    <iframe id="page" src="home.html"></iframe>
     <footer>
-        <p style="margin: 0;background-color: white;">Footer</p>
+        <button class="home footer-button">
+          <img src="svgs\home.svg" width="40" height="40">
+        </button>
+        <button class="search footer-button">
+          <img src="svgs\search.svg" width="40" height="40">
+        </button>
+        <button class="card footer-button">
+          <img src="svgs\card.svg" width="40" height="40">
+        </button>
     </footer>
 </body>
