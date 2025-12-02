@@ -4,6 +4,9 @@
   --primary-color-disabled: rgb(113, 113, 143);
   --text-alt: white;
 }
+html{
+    height: 100vh;
+}
 footer{
 
     display: flex;
@@ -26,6 +29,7 @@ iframe{
 body{
     text-align: center;
     margin: 0;
+    height: 100%;
 }
 #search-container{
     background-color: var(--primary-color);
@@ -131,4 +135,7 @@ footer>button{
     background-color: transparent;
     border: none;
     color: white;
+}
+img[src$=".svg"]{
+    pointer-events:none;
 }

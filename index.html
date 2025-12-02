@@ -1,35 +1,41 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css"/>
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        const serviceWorkerPath = 'serviceworker.js';
-        navigator.serviceWorker.register(serviceWorkerPath)
-          .then((registration) => {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          })
-          .catch((error) => {
-            console.log('ServiceWorker registration failed: ', error);
-          });
-      });
-    }
-    </script>
-    <script src="index.js" defer></script>
-</head>
-<body>
-    <iframe id="page" src="home.html"></iframe>
-    <footer>
-        <button class="home footer-button">
-          <img src="svgs\home.svg" width="40" height="40">
-        </button>
-        <button class="search footer-button">
-          <img src="svgs\search.svg" width="40" height="40">
-        </button>
-        <button class="card footer-button">
-          <img src="svgs\card.svg" width="40" height="40">
-        </button>
-    </footer>
-</body>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Ibertrans</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="index.css"/>
+      <link rel="manifest" href="manifest.webmanifest">
+      <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+      <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          const serviceWorkerPath = 'serviceworker.js';
+          navigator.serviceWorker.register(serviceWorkerPath)
+            .then((registration) => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch((error) => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+      </script>
+      <script src="index.js" defer></script>
+  </head>
+  <body>
+      <iframe id="page" src="home.html"></iframe>
+      <footer>
+          <button class="home footer-button">
+            <img src="svgs\home.svg" width="40" height="40">
+          </button>
+          <button class="search footer-button">
+            <img src="svgs\search.svg" width="40" height="40">
+          </button>
+          <button class="card footer-button">
+            <img src="svgs\card.svg" width="40" height="40">
+          </button>
+      </footer>
+  </body>
+</html>
